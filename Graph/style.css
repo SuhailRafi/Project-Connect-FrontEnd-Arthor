@@ -1,14 +1,23 @@
  
 *{
-    margin: auto auto;
-    align-content: center;
+    margin: 0;
+    padding: 0;
     background-color:#E6F5F1;
 }
 
-#my_table {
-    align-content: center;
-    margin-top: 30px;
+body {
+    font-family: sans-serif;
 }
+
+
+.my_table1 {
+    margin: 0;
+    display: inline-block;
+    }
+.my_table {
+    margin: 0;
+    float: left;
+    }
 
 .table-title {
     height:50px;
@@ -17,7 +26,7 @@
 
 #curve_chart1 {
     width: 700px;
-    height: 500px;
+    height: 500px;  
 }
 #curve_chart2 {
     width: 700px;
@@ -38,4 +47,25 @@
 #curve_chart6 {
     width: 700px;
     height: 500px;
+}
+
+@media only screen and (min-width:680px ) {
+    .my_table1 {
+        margin-top: 20px;
+        display: inline-block;
+        }
+    .my_table {
+        margin-top: 20px;
+        float: left;
+        }
+}
+
+@media only screen and (min-width:800px ) {
+    .wrap {
+        text-align: center;
+      }
+    .my_table {
+        float: none;
+        display:inline-block;
+    }
 }

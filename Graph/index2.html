@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Line Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawLineChart);
+
+      function drawLineChart() {
+
+      var arr1 = [
+          ['Time', 'var1'], 
+          ['2004',  1000],
+          ['2005',  1170],
+          ['2006',  660],
+          ['2007',  1030]
+          ];
+
+      var arr2 = [
+          ['Time', 'var1'],
+          ['2004',  81],
+          ['2005',  1152],
+          ['2006',  1238],
+          ['2007',  1211]
+        ];
+
+      var arr3 = [
+          ['Time', 'var1'],
+          ['2004',  1143],
+          ['2005',  1058],
+          ['2006',  698],
+          ['2007',  1297]
+        ];
+
+      var arr4 = [
+          ['Time', 'var1'],
+          ['2004',  956],
+          ['2005',  532],
+          ['2006',  713],
+          ['2007',  401]
+        ];
+
+      var arr5 = [
+          ['Time', 'var1'],
+          ['2004',  1027],
+          ['2005',  1179],
+          ['2006',  1352],
+          ['2007',  61]
+        ];
+
+      var arr6 = [
+          ['Time', 'var1'],
+          ['2004',  245],
+          ['2005',  400],
+          ['2006',  683],
+          ['2007',  1200]
+        ];
+
+        var data1 = google.visualization.arrayToDataTable(arr1);
+
+        var data2 = google.visualization.arrayToDataTable(arr2);
+
+        var data3 = google.visualization.arrayToDataTable(arr3);
+
+        var data4 = google.visualization.arrayToDataTable(arr4);
+
+        var data5 = google.visualization.arrayToDataTable(arr5);
+
+        var data6 = google.visualization.arrayToDataTable(arr6);
+
+        var options1 = {
+          title: 'Graph 1',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22} },
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var1' },
+        };
+
+        var options2 = {
+          title: 'Graph 2',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22} },
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var2' }
+        };
+
+        var options3 = {
+          title: 'Graph 3',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22} },
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var3' }
+        };
+        var options4 = {
+          title: 'Graph 4',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22} },
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var4' }
+        };
+
+        var options5 = {
+          title: 'Graph 5',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22} },
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var5' }
+        };
+
+        var options6 = {
+          title: 'Graph 6',
+          curveType: 'function',
+          legend: { position: 'top', textStyle: { fontSize: 22}},
+          hAxis: { title: 'time' },
+          vAxis: { title: 'var6' }
+        };
+
+        var chart1= new google.visualization.LineChart(document.getElementById('curve_chart1'));
+        var chart2 = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+        var chart3 = new google.visualization.LineChart(document.getElementById('curve_chart3'));
+        var chart4 = new google.visualization.LineChart(document.getElementById('curve_chart4'));
+        var chart5 = new google.visualization.LineChart(document.getElementById('curve_chart5'));
+        var chart6 = new google.visualization.LineChart(document.getElementById('curve_chart6'));
+
+        chart1.draw(data1, options1);
+        chart2.draw(data2, options2);
+        chart3.draw(data3, options3);
+        chart4.draw(data4, options4);
+        chart5.draw(data5, options5);
+        chart6.draw(data6, options6);
+      }
+    </script>
+  </head>
+  
+  <body>
+    <div class="wrap">
+      <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table1">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 1</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>
+            <div id="curve_chart1"></div>
+          </td>
+        </tr>
+      </table>
+
+      <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 2</th>
+          </tr>
+      </thead>
+        <tr>
+          <td>
+            <div id="curve_chart2"></div>
+          </td>
+        </tr>
+      </table>
+      <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 3</th>
+          </tr>
+        </thead>  
+        <tr>  
+          <td>
+            <div id="curve_chart3"></div>
+          </td>
+        </tr>
+      </table>
+      <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 4</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td>
+            <div id="curve_chart4"></div>
+          </td>
+        </tr>
+      </table>  
+      <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 5</th>
+          </tr>
+        </thead>    
+        <tr>  
+          <td>
+            <div id="curve_chart5"></div>
+          </td>
+        </tr>
+      </table>
+
+       <table CELLPADDING='1'
+            CELLSPACING='1'
+            BORDER='1' 
+            bordercolor=black;width='30%'
+            class="my_table">
+
+        <thead>
+          <tr bgcolor="#6495ED">
+            <th class= "table-title">Graph 6</th>
+          </tr>
+      </thead>
+        <tr>
+          <td>
+            <div id="curve_chart6"></div>
+          </td>
+        </tr>
+      </table>
+    </div>    
+
+  </body>
+
+</html>
